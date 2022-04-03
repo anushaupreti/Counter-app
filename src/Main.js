@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Button from './Button';
+import './style.css';
 
 const Main = () => {
   const [count, setCount] = useState(0);
@@ -15,12 +16,14 @@ const Main = () => {
   };
 
   return (
-    <div>
+    <div className='counter'>
       <h1>Counter APP</h1>
       <h3>{count}</h3>
-      <Button name='increment' method={method} />
-      <Button name='decrement' method={method} />
-      <Button name='reset' method={method} />
+      <div className='buttons'>
+        <Button name='increment' method={method} />
+        <Button name='decrement' method={method} />
+        <Button name='reset' method={method} />
+      </div>
     </div>
   );
 };
